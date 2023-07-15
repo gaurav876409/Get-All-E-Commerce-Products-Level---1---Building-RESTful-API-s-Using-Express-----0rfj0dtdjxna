@@ -15,7 +15,9 @@ app.get("/api/v1/products", (req, res) => {
         res.status(200).json({
             status: "success",
             message: "Product fetched successfully",
-            data: products
+            data: {
+                product: (products)
+            }
         });
     }else{
         res.status(404).json({message: "product not found"});
